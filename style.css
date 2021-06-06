@@ -88,6 +88,15 @@ body {
     z-index: 5;
 
   }
+  #ship-invis{
+    position: fixed;
+    left: 50%;
+    width: 300px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    visibility: hidden;
+  }
   .sun{
     position: absolute;
     width: 100%;
