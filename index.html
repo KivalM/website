@@ -27,14 +27,16 @@
 
         $(document).keyup(function (e) {
             delete keys[e.keyCode];
-            changeImage("img/ship_off.png")
+
         });
 
         function movePlane() {
-
+            console.log(keys)
+            if (Object.entries(keys).length == 0) changeImage("img/ship_off.png")
             for (var direction in keys) {
 
                 if (!keys.hasOwnProperty(direction)) continue;
+
 
                 if (direction == 39) {
                     playerSpriteX += 0.5;
@@ -52,6 +54,7 @@
                 if (direction == 40) {
                     document.getElementById("parallax").scrollBy(0, 20);
                 }
+
             }
         }
 
