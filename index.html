@@ -27,12 +27,10 @@
 
         $(document).keyup(function (e) {
             delete keys[e.keyCode];
-
+            if (Object.entries(keys).length == 0) changeImage("img/ship_off.png")
         });
 
         function movePlane() {
-            console.log(keys)
-            if (Object.entries(keys).length == 0) changeImage("img/ship_off.png")
             for (var direction in keys) {
 
                 if (!keys.hasOwnProperty(direction)) continue;
