@@ -145,7 +145,7 @@ body {
     height: 500px; /* fallback for older browsers */
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     -webkit-perspective: 300px;
     perspective: 300px;
     -webkit-perspective-origin-x: 100%;
