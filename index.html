@@ -22,18 +22,20 @@
 
         $(document).keydown(function (e) {
             keys[e.keyCode] = true;
+            changeImage("img/ship_on.png")
         });
 
         $(document).keyup(function (e) {
             delete keys[e.keyCode];
+            changeImage("img/ship_off.png")
         });
 
         function movePlane() {
-            changeImage("img/ship_off.png")
+
             for (var direction in keys) {
 
                 if (!keys.hasOwnProperty(direction)) continue;
-                changeImage("img/ship_on.png")
+
                 if (direction == 39) {
                     playerSpriteX += 0.5;
                     document.getElementById("ship").style.left = playerSpriteX + "%";
