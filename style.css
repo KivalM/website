@@ -36,7 +36,7 @@ body {
   }
   .moon{
     position: relative;
-    width: 100px;
+    width: 8%;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
@@ -82,7 +82,7 @@ body {
 
     position: fixed;
     left: 50%;
-    width: 300px;
+    width: 15%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
@@ -104,7 +104,7 @@ body {
 
   .jupiter{
     position: relative;
-    width: 700px;
+    width: 40%;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
@@ -253,16 +253,24 @@ body {
 
   .text{
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 2rem;
   }
-
+  .tags{
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    justify-content:space-between;
+    right: 0%;
+    height: 90%;
+    top: 5%;
+    }
 
   .tag{
-    position: fixed;
     font-size: large;
     color:black;
-    height: 60px;
-    width: 60px;
+    height: 7vh;
+    width: 7vh;
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid white;
@@ -280,25 +288,23 @@ body {
     top: 10px;
     background-image: url("img/house-fill.svg");
     background-color: black;
-    background-size: 50px;
+    background-size: 6vh;
     background-position: center;
     background-repeat: no-repeat;
 
   }
 
   .git{
-    top: 80px;
     background-image: url("img/github.svg");
     background-color: white;
-    background-size: 60px;
+    background-size: 7vh;
     background-position: center;
     background-repeat: no-repeat;
   }
   .linked{
-    top: 150px;
     background-image: url("img/linkedin.svg");
     background-color: white;
-    background-size: 60px;
+    background-size: 7vh;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -326,7 +332,7 @@ body {
     top: 220px;
     background-image: url("img/neptune.png");
     background-color: white;
-    background-size: 60px;
+    background-size: 7vh;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -334,7 +340,7 @@ body {
     top: 290px;
     background-image: url("img/uranus.png");
     background-color: white;
-    background-size: 80px;
+    background-size: 30vh;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -342,7 +348,7 @@ body {
     top: 360px;
     background-image: url("img/saturn.png");
     background-color: white;
-    background-size: 500px;
+    background-size: 30vh;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -350,7 +356,7 @@ body {
     top: 430px;
     background-image: url("img/jupiter.png");
     background-color: white;
-    background-size: 60px;
+    background-size: 7vh;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -358,7 +364,7 @@ body {
     top: 500px;
     background-image: url("img/mars.png");
     background-color: white;
-    background-size: 60px;
+    background-size: 7vh;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -366,7 +372,7 @@ body {
     top: 570px;
     background-image: url("img/earth.png");
     background-color: white;
-    background-size: 60px;
+    background-size: 7vh;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -374,7 +380,7 @@ body {
     top: 640px;
     background-image: url("img/venus.png");
     background-color: white;
-    background-size: 60px;
+    background-size: 7vh;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -382,7 +388,7 @@ body {
     top: 710px;
     background-image: url("img/mercury.png");
     background-color: white;
-    background-size: 60px;
+    background-size: 7vh;
     background-position: center;
     background-repeat: no-repeat;
   }
