@@ -145,11 +145,16 @@ body {
     height: 500px; /* fallback for older browsers */
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     -webkit-perspective: 300px;
     perspective: 300px;
     -webkit-perspective-origin-x: 100%;
     perspective-origin-x: 100%;
+  }
+  .parallax::-webkit-scrollbar {
+    display: none;
   }
 
   .parallax__group {
@@ -254,6 +259,11 @@ body {
   .text{
     color: whitesmoke;
     font-size: 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    .tags {
+      visibility: hidden;
+    }
   }
   .tags{
     position: fixed;
