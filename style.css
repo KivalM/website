@@ -277,7 +277,7 @@ body {
   }
   .home{
     top: 10px;
-    background-image: url("img/bootstrap-icons-1.5.0/house-fill.svg");
+    background-image: url("img/house-fill.svg");
     background-color: black;
     background-size: 50px;
     background-position: center;
@@ -287,7 +287,7 @@ body {
 
   .git{
     top: 80px;
-    background-image: url("img/bootstrap-icons-1.5.0/github.svg");
+    background-image: url("img/github.svg");
     background-color: white;
     background-size: 60px;
     background-position: center;
@@ -295,7 +295,7 @@ body {
   }
   .linked{
     top: 150px;
-    background-image: url("img/bootstrap-icons-1.5.0/linkedin.svg");
+    background-image: url("img/linkedin.svg");
     background-color: white;
     background-size: 60px;
     background-position: center;
