@@ -35,7 +35,6 @@
         $(document).keydown(function (e) {
             keys[e.keyCode] = true;
             changeImage("img/ship_on.png")
-            openFullscreen();
         });
 
         $(document).keyup(function (e) {
@@ -48,21 +47,21 @@
 
                 if (!keys.hasOwnProperty(direction)) continue;
 
-
-                if (direction == 39) {
+                console.log(direction);
+                if (direction == 39 || direction == 68) {
                     playerSpriteX += 0.5;
                     document.getElementById("ship").style.left = playerSpriteX + "%";
 
                 }
-                if (direction == 38) {
+                if (direction == 38 || direction == 87) {
                     document.getElementById("parallax").scrollBy(0, -20);
                     document.getElementById("instructions").style.visibility = "hidden";
                 }
-                if (direction == 37) {
+                if (direction == 37 || direction == 65) {
                     playerSpriteX -= 0.5;
                     document.getElementById("ship").style.left = playerSpriteX + "%";
                 }
-                if (direction == 40) {
+                if (direction == 40 || direction == 83) {
                     document.getElementById("parallax").scrollBy(0, 20);
                 }
 
