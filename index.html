@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html onkeypress="openFullscreen()">
 
 <head>
     <title>Portfolio Website</title>
@@ -10,6 +10,18 @@
 
     <script src="jquery-3.6.0.min.js"></script>
     <script>
+        var elem = document.documentElement;
+
+        /* View in fullscreen */
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
         function changeImage(a) {
             document.getElementById("ship").src = a;
         }
@@ -23,6 +35,7 @@
         $(document).keydown(function (e) {
             keys[e.keyCode] = true;
             changeImage("img/ship_on.png")
+            openFullscreen();
         });
 
         $(document).keyup(function (e) {
@@ -271,18 +284,7 @@
         if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
             alert("Website not mobile ready, Please view on desktop");
         }
-        var elem = document.documentElement;
 
-        /* View in fullscreen */
-        function openFullscreen() {
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) { /* Safari */
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { /* IE11 */
-                elem.msRequestFullscreen();
-            }
-        }
     </script>
 </body>
 
