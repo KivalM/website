@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--JQUERY-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--Fixed objects 1-->
+    <div id="overlay">
+      <div class="center-full" id="content-overlay">
+        <h1>Welcome to my Interactive Portfolio</h1>
+        <h2>I recommend fullscreen mode for the best experience</h2>
+        <button onclick="openFullscreen()">Go Fullscreen</button>
+        <p id="mobile" style="width: 70%"></p>
+        <button onclick="Start()">Start</button>
+      </div>
+    </div>
+    <div class="space container-fluid h-100 w-100"></div>
+    <div class="instructions" id="instructions">
+      <p>Use Arrow Keys or WASD to fly the rocket</p>
+    </div>
+    <img class="ship" id="ship" src="img/ship_off.png" />
+
+    <!--Fixed Icons on the right-->
+    <div class="tags">
+      <a
+        class="tag home"
+        href="/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      ></a>
+      <a
+        class="tag git"
+        href="https://github.com/StarPlatin4m"
+        target="_blank"
+        rel="noopener noreferrer"
+      ></a>
+      <a
+        class="tag linked"
+        href="https://www.linkedin.com/in/kivalm/"
+        target="_blank"
+        rel="noopener noreferrer"
+      ></a>
+
+      <a
+        class="tag neptune-icon"
+        onclick="document.getElementById('neptune').scrollIntoView({ block: 'center',  behavior: 'smooth' });"
+      >
+      </a>
+      <a
+        class="tag uranus-icon"
+        onclick="document.getElementById('uranus').scrollIntoView({ block: 'center',  behavior: 'smooth' });"
+      >
+      </a>
+      <a
+        class="tag saturn-icon"
+        onclick="document.getElementById('saturn').scrollIntoView({ block: 'center',  behavior: 'smooth' });"
+      >
+      </a>
+      <a
+        class="tag jupiter-icon"
+        onclick="document.getElementById('jupiter').scrollIntoView({ block: 'center',  behavior: 'smooth' });"
+      >
+      </a>
+      <a
+        class="tag mars-icon"
+        onclick="document.getElementById('mars').scrollIntoView({ block: 'center',  behavior: 'smooth' });"
+      >
+      </a>
+      <a
+        class="tag earth-icon"
+        onclick="document.getElementById('earth').scrollIntoView({ block: 'center',  behavior: 'smooth' });"
+      >
+      </a>
+      <a
+        class="tag venus-icon"
+        onclick="document.getElementById('venus').scrollIntoView({ block: 'center',  behavior: 'smooth' });"
+      >
+      </a>
+      <a
+        class="tag mercury-icon"
+        onclick="document.getElementById('mercury').scrollIntoView({ block: 'center',  behavior: 'smooth' });"
+      >
+      </a>
+    </div>
+
+    <!--Planets with parallax effect-->
+
+    <div class="parallax" id="parallax">
+      <!--Neptune-->
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--text">
+          <div class="intro">
+            <h1 class="heading">The End</h1>
+            <p class="text">
+              Use the icons on the right to jump back to a particular planet. Or
+              go to my LinkedIn or Github
+            </p>
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <img class="jupiter" src="img/neptune.png" id="neptune" />
+        </div>
+        <div class="parallax__layer parallax__layer--fore">
+          <img class="moon nep1" src="img/neptune_moon_1.png" />
+        </div>
+      </div>
+
+      <!--uranus-->
+      <div class="parallax__group">
+        <div class=".parallax__layer parallax__layer--text">
+          <div class="intro left">
+            <h1 class="heading">Teacher</h1>
+            <p class="text">
+              My passion for programming extends past wanting to teach only
+              myself but to teach others as well. I give lessons at my old high
+              school, teaching them C++.
+            </p>
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <img class="jupiter" src="img/uranus.png" id="uranus" />
+        </div>
+      </div>
+
+      <!--saturn-->
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--text">
+          <div class="intro left">
+            <h1 class="heading">Interests</h1>
+            <p class="text">
+              I like mathematics, statistics and computer science. Not just
+              because it's interesting, but because it lets me test my limits.
+              And I like that (most of the time).
+            </p>
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <img class="saturn" src="img/saturn.png" id="saturn" />
+        </div>
+        <div class="parallax__layer parallax__layer--fore">
+          <img class="moon nep1" src="img/saturn_moon_1.png" />
+        </div>
+      </div>
+
+      <!--jupiter-->
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--text">
+          <div class="intro">
+            <h1 class="heading">Open Source-r</h1>
+            <p class="text">
+              I am a massive Open Source Enthusiast. I spend a lot of time
+              working with, working on and using Open Source Software. I try to
+              contribute back to the community where possible.
+            </p>
+          </div>
+        </div>
+
+        <div class="parallax__layer parallax__layer--base">
+          <img class="jupiter" src="img/jupiter_up.png" id="jupiter" />
+        </div>
+        <div class="parallax__layer parallax__layer--fore1">
+          <img class="moon jup1" src="img/j_moon_2.png" />
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+          <img class="moon jup2" src="img/j_moon_3.png" />
+        </div>
+        <div class="parallax__layer parallax__layer--fore2">
+          <img class="moon jup3" src="img/j_moon_4.png" />
+        </div>
+        <div class="parallax__layer parallax__layer--fore3">
+          <img class="moon jup4" src="img/j_moon_1.png" />
+        </div>
+      </div>
+
+      <!--Asteroid Field-->
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore5">
+          <img class="field" src="img/asteroid2.png" />
+        </div>
+        <div class="parallax__layer parallax__layer--fore3">
+          <img class="field" src="img/asteroid3.png" />
+        </div>
+      </div>
+
+      <!--Mars-->
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--text">
+          <div class="intro left">
+            <h1 class="heading">Freelancer</h1>
+            <p class="text">
+              I do freelance development on the side on sites like Freelancer
+              and Upwork. That ranges from automation tools to websites and
+              beyond.
+            </p>
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <img class="jupiter" src="img/mars.png" id="mars" />
+        </div>
+      </div>
+
+      <!--Earth-->
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="intro">
+            <h1 class="heading">Web Developer</h1>
+            <p class="text">
+              I am a full-stack web developer. It's not my favourite type of
+              development. UI design is not for me. I prefer command lines
+              anyway.
+            </p>
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <img class="jupiter" src="img/earth.png" id="earth" />
+        </div>
+        <div class="parallax__layer parallax__layer--fore1">
+          <img class="moon eth" src="img/moon.png" />
+        </div>
+        <div class="parallax__layer parallax__layer--fore3">
+          <img class="moon jup2" src="img/satelite.png" />
+        </div>
+      </div>
+
+      <!--Venus-->
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--text">
+          <div class="intro left">
+            <h1 class="heading">Programmer</h1>
+            <p class="text">
+              I enjoy problem solving and programming as well as creating things
+              with code. Thus, I spend alot of time doing competitive
+              programming contests. I have had some success nationally, but I
+              have yet to make my mark on the world.
+            </p>
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <img class="jupiter" src="img/venus.png" id="venus" />
+        </div>
+      </div>
+
+      <!--Mercury-->
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--text">
+          <div class="intro">
+            <h1 class="heading">Hi, I am Kival</h1>
+            <p class="text">
+              I'm Kival. An aspiring computer science student with a passion for
+              science and technology. After Undergrad, I want to further my
+              tertiary education with a Masters and PhD, possibly majoring in
+              Machine Learning/AI or Cybersecurity.
+            </p>
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <img class="jupiter" src="img/mercury.png" id="mercury" />
+        </div>
+      </div>
+
+      <div class="parallax__group">
+        <img src="img/sun.png" class="sun" />
+      </div>
+    </div>
+    <script>
+      function Start() {
+        $("#overlay").remove();
+        document
+          .getElementById("parallax")
+          .scrollTo(0, document.getElementById("parallax").scrollHeight);
+      }
+      function openFullscreen() {
+        var elem = document.documentElement;
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          /* Safari */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          /* IE11 */
+          elem.msRequestFullscreen();
+        }
+      }
+      function changeImage(a) {
+        document.getElementById("ship").src = a;
+      }
+      console.log("clicked");
+      var xpos = -50;
+      var playerSpriteX = 50;
+
+      setInterval(movePlane, 20);
+      var keys = {};
+
+      $(document).keydown(function (e) {
+        keys[e.keyCode] = true;
+        changeImage("img/ship_on.png");
+      });
+
+      $(document).keyup(function (e) {
+        delete keys[e.keyCode];
+        if (Object.entries(keys).length == 0) changeImage("img/ship_off.png");
+      });
+
+      function movePlane() {
+        for (var direction in keys) {
+          if (!keys.hasOwnProperty(direction)) continue;
+
+          console.log(direction);
+          if (direction == 39 || direction == 68) {
+            playerSpriteX += 0.5;
+            document.getElementById("ship").style.left = playerSpriteX + "%";
+          }
+          if (direction == 38 || direction == 87) {
+            document.getElementById("parallax").scrollBy(0, -20);
+            document.getElementById("instructions").style.visibility = "hidden";
+          }
+          if (direction == 37 || direction == 65) {
+            playerSpriteX -= 0.5;
+            document.getElementById("ship").style.left = playerSpriteX + "%";
+          }
+          if (direction == 40 || direction == 83) {
+            document.getElementById("parallax").scrollBy(0, 20);
+          }
+        }
+      }
+      document
+        .getElementById("parallax")
+        .scrollTo(0, document.getElementById("parallax").scrollHeight);
+      if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
+        $("#mobile").append(
+          "Hey. It looks like you're on mobile. This page has not been optimised for mobile, but the content should still be readable. Go ahead at your own risk"
+        );
+      }
+    </script>
+  </body>
+</html>
