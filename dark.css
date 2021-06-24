@@ -209,3 +209,8 @@ body {
   background-color: var(--nord11);
   color: white;
 }
+@media only screen and (max-width: 1000px) {
+  .divider {
+    visibility: hidden;
+  }
+}
