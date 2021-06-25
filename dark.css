@@ -164,7 +164,6 @@ body {
 .div1 {
   fill: var(--nord0);
   fill-rule: nonzero;
-  width: fit-content;
   scale: 1.1;
 }
 
